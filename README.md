@@ -1,85 +1,87 @@
 <div align="center">
 
+**English** · [Português (Brasil)](./README.pt-BR.md)
+
 # RaizStore
 
-**Um e-commerce full stack criado para explorar boas práticas de engenharia de software com Inteligência Artificial.**
+**A full-stack e-commerce application built to explore software engineering best practices with Artificial Intelligence.**
 
-Este projeto foi inteiramente construído com **ChatGPT/Codex**, a partir de requisitos e direção humana, usando **Skills versionadas** para orientar a implementação e preservar a arquitetura.
+This project was built entirely with **ChatGPT/Codex**, based on human requirements and direction, using **version-controlled Skills** to guide implementation and preserve its architecture.
 
 **Next.js · NestJS · PostgreSQL · Tailwind CSS · Turborepo**
 
 </div>
 
-## Sobre o projeto
+## About the project
 
-RaizStore é um MVP educacional de loja virtual com experiências para cliente e administrador. Mais do que demonstrar funcionalidades de e-commerce, o projeto mostra como a IA pode produzir e manter software organizado quando trabalha sob regras explícitas de qualidade.
+RaizStore is an educational storefront MVP with dedicated customer and administrator experiences. More than showcasing e-commerce features, the project demonstrates how AI can build and maintain well-structured software when guided by explicit quality standards.
 
-A base foi construída com **Clean Code, SOLID, DDD e CQRS**, contratos compartilhados entre frontend e backend, infraestrutura desacoplada por interfaces e documentação interativa das APIs com **Swagger**.
+Its foundation applies **Clean Code, SOLID, DDD, and CQRS**, with shared contracts between frontend and backend, infrastructure decoupled through interfaces, and interactive API documentation powered by **Swagger**.
 
-## Visão do produto
+## Product preview
 
 <p align="center">
   <a href="./docs/screenshots/home.png">
-    <img src="./docs/screenshots/home.png" alt="Catálogo de produtos da RaizStore" width="900" />
+    <img src="./docs/screenshots/home.png" alt="RaizStore product catalog" width="900" />
   </a>
 </p>
 
-<p align="center"><sub>Clique na imagem para visualizá-la em alta resolução.</sub></p>
+<p align="center"><sub>Click the image to view it in full resolution.</sub></p>
 
 <details>
-  <summary><strong>Explorar login, carrinho, pedidos e painel administrativo</strong></summary>
+  <summary><strong>Explore sign-in, cart, orders, and the admin dashboard</strong></summary>
   <br />
 
-  <p><strong>Autenticação</strong></p>
+  <p><strong>Authentication</strong></p>
   <a href="./docs/screenshots/login.png">
-    <img src="./docs/screenshots/login.png" alt="Tela de login da RaizStore" width="900" />
+    <img src="./docs/screenshots/login.png" alt="RaizStore sign-in screen" width="900" />
   </a>
 
-  <p><strong>Carrinho de compras</strong></p>
+  <p><strong>Shopping cart</strong></p>
   <a href="./docs/screenshots/cart.png">
-    <img src="./docs/screenshots/cart.png" alt="Carrinho de compras da RaizStore" width="900" />
+    <img src="./docs/screenshots/cart.png" alt="RaizStore shopping cart" width="900" />
   </a>
 
-  <p><strong>Histórico de pedidos</strong></p>
+  <p><strong>Order history</strong></p>
   <a href="./docs/screenshots/orders.png">
-    <img src="./docs/screenshots/orders.png" alt="Histórico de pedidos da RaizStore" width="900" />
+    <img src="./docs/screenshots/orders.png" alt="RaizStore order history" width="900" />
   </a>
 
-  <p><strong>Painel administrativo</strong></p>
+  <p><strong>Admin dashboard</strong></p>
   <a href="./docs/screenshots/admin.png">
-    <img src="./docs/screenshots/admin.png" alt="Painel administrativo da RaizStore" width="900" />
+    <img src="./docs/screenshots/admin.png" alt="RaizStore admin dashboard" width="900" />
   </a>
 </details>
 
-## Funcionalidades
+## Features
 
-**Experiência do cliente**
+**Customer experience**
 
-- Catálogo com busca e filtros por categoria, faixa de preço e promoções.
-- Carrinho editável, finalização de compra e histórico de pedidos.
-- Autenticação simples com perfis de cliente e administrador.
+- Catalog search and filters by category, price range, and promotions.
+- Editable shopping cart, checkout, and order history.
+- Simple role-based authentication for customers and administrators.
 
-**Operação da loja**
+**Store operations**
 
-- Cadastro de produtos com preço, estoque e categoria.
-- Cadastro de categorias e atualização de preços.
-- Criação de campanhas promocionais por período.
-- Rotas e ações administrativas protegidas também no backend.
+- Product creation with price, inventory, and category.
+- Category management and price updates.
+- Time-bound promotional campaigns.
+- Administrative routes and actions protected by the backend.
 
-## Engenharia e arquitetura
+## Engineering and architecture
 
-| Área         | Decisões principais                                          |
-| ------------ | ------------------------------------------------------------ |
-| Frontend     | Next.js, React, TypeScript e Tailwind CSS                    |
-| Backend      | NestJS, DDD, CQRS, SOLID e Clean Code                        |
-| Dados        | PostgreSQL com Prisma ORM e migrations                       |
-| Integração   | Contratos TypeScript compartilhados entre frontend e backend |
-| Documentação | OpenAPI com Swagger em `/docs`                               |
-| Monorepo     | npm workspaces e Turborepo                                   |
+| Area          | Main decisions                                           |
+| ------------- | -------------------------------------------------------- |
+| Frontend      | Next.js, React, TypeScript, and Tailwind CSS             |
+| Backend       | NestJS, DDD, CQRS, SOLID, and Clean Code                 |
+| Data          | PostgreSQL with Prisma ORM and migrations                |
+| Integration   | Shared TypeScript contracts between frontend and backend |
+| Documentation | OpenAPI with Swagger at `/docs`                          |
+| Monorepo      | npm workspaces and Turborepo                             |
 
-O backend é dividido nos contextos `identity`, `catalog` e `sales`. Controllers traduzem HTTP e despacham Commands ou Queries; regras de negócio permanecem no domínio e os handlers dependem de portas. Prisma, JWT e bcrypt são adaptadores substituíveis, facilitando testes e futuras trocas de infraestrutura.
+The backend is organized into the `identity`, `catalog`, and `sales` bounded contexts. Controllers translate HTTP requests and dispatch Commands or Queries; business rules remain in the domain, and handlers depend on ports. Prisma, JWT, and bcrypt are replaceable adapters, making testing and future infrastructure changes easier.
 
-No checkout, preços e promoções são recalculados pelo backend e o pedido é persistido em transação, sem confiar nos totais enviados pelo cliente.
+During checkout, the backend recalculates prices and promotions and persists the order transactionally, without trusting totals submitted by the client.
 
 ```text
 RaizStore/
@@ -87,25 +89,25 @@ RaizStore/
 │   ├── web/          # Next.js + Tailwind CSS
 │   └── api/          # NestJS + CQRS + Swagger
 ├── packages/
-│   └── contracts/    # Interfaces compartilhadas
+│   └── contracts/    # Shared interfaces
 └── .agents/
-    └── skills/       # Regras de construção e manutenção por stack
+    └── skills/       # Stack-specific construction and maintenance rules
 ```
 
-## IA guiada por Skills
+## AI guided by Skills
 
-As Skills não foram usadas apenas para iniciar o projeto. Elas foram criadas a partir do próprio código e versionadas no repositório para orientar evoluções futuras sem degradar suas decisões arquiteturais:
+Skills were used for more than bootstrapping the project. They were derived from the codebase itself and versioned in the repository to guide future evolution without eroding its architectural decisions:
 
-- [`maintain-store-frontend`](./.agents/skills/maintain-store-frontend/SKILL.md): preserva rotas, features, providers, integração HTTP e linguagem visual.
-- [`maintain-store-backend`](./.agents/skills/maintain-store-backend/SKILL.md): preserva DDD, CQRS, domínio, portas e adaptadores.
-- [`maintain-store-contracts`](./.agents/skills/maintain-store-contracts/SKILL.md): coordena mudanças de contrato entre as aplicações.
-- Skills específicas para novas implementações em [Next.js](./.agents/skills/typescript-nextjs-store/SKILL.md) e [NestJS](./.agents/skills/typescript-nestjs-cqrs/SKILL.md).
+- [`maintain-store-frontend`](./.agents/skills/maintain-store-frontend/SKILL.md): preserves routes, features, providers, HTTP integration, and the visual language.
+- [`maintain-store-backend`](./.agents/skills/maintain-store-backend/SKILL.md): preserves DDD, CQRS, the domain, ports, and adapters.
+- [`maintain-store-contracts`](./.agents/skills/maintain-store-contracts/SKILL.md): coordinates contract changes between applications.
+- Stack-specific Skills support new implementations in [Next.js](./.agents/skills/typescript-nextjs-store/SKILL.md) and [NestJS](./.agents/skills/typescript-nestjs-cqrs/SKILL.md).
 
-Essa abordagem transforma arquitetura, padrões e convenções em contexto reutilizável para a IA — tornando a manutenção mais previsível e consistente.
+This approach turns architecture, patterns, and conventions into reusable context for AI, making maintenance more predictable and consistent.
 
-## Executando localmente
+## Running locally
 
-**Pré-requisitos:** Node.js 20+, npm e PostgreSQL.
+**Requirements:** Node.js 20+, npm, and PostgreSQL.
 
 ```bash
 git clone https://github.com/raulgdias/raiz-store.git
@@ -123,20 +125,20 @@ npm run db:seed
 npm run dev
 ```
 
-| Serviço | Endereço                     |
+| Service | Address                      |
 | ------- | ---------------------------- |
-| Loja    | `http://localhost:3000`      |
+| Store   | `http://localhost:3000`      |
 | API     | `http://localhost:3001/api`  |
 | Swagger | `http://localhost:3001/docs` |
 
-Credenciais criadas pelo seed:
+Credentials created by the seed:
 
-- Administrador: `admin` / `admin123`
-- Cliente: `cliente` / `cliente123`
+- Administrator: `admin` / `admin123`
+- Customer: `cliente` / `cliente123`
 
-As senhas são armazenadas como hash e destinam-se exclusivamente ao ambiente de estudo.
+Passwords are stored as hashes and are intended exclusively for the study environment.
 
-## Qualidade
+## Quality
 
 ```bash
 npm run lint
@@ -148,5 +150,5 @@ npm run build
 ---
 
 <div align="center">
-  Projeto de estudo sobre engenharia de software, arquitetura sustentável e desenvolvimento assistido por IA.
+  A study project about software engineering, sustainable architecture, and AI-assisted development.
 </div>
