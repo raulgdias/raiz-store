@@ -6,10 +6,10 @@
 
 Este projeto foi inteiramente construído com **ChatGPT/Codex**, a partir de requisitos e direção humana, usando **Skills versionadas** para orientar a implementação e preservar a arquitetura.
 
+</div>
+
 <!-- prettier-ignore -->
 <p><a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&amp;logo=nextdotjs&amp;logoColor=white" alt="Next.js" /></a> <a href="https://nestjs.com/"><img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&amp;logo=nestjs&amp;logoColor=white" alt="NestJS" /></a> <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL" /></a> <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&amp;logo=tailwindcss&amp;logoColor=white" alt="Tailwind CSS" /></a> <a href="https://turbo.build/repo"><img src="https://img.shields.io/badge/Turborepo-EF4444?style=for-the-badge&amp;logo=turborepo&amp;logoColor=white" alt="Turborepo" /></a></p>
-
-</div>
 
 ## Sobre o projeto
 
