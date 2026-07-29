@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manter Frontend RaizStore"
+  short_description: "Preserva a arquitetura atual do frontend"
+  default_prompt: "Use $maintain-store-frontend para evoluir o frontend sem quebrar sua arquitetura."

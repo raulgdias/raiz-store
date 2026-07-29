@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manter Backend RaizStore"
+  short_description: "Preserva DDD, CQRS e portas do backend"
+  default_prompt: "Use $maintain-store-backend para evoluir o backend mantendo DDD, CQRS e SOLID."

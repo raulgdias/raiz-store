@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manter Contratos RaizStore"
+  short_description: "Evita divergência entre frontend e backend"
+  default_prompt: "Use $maintain-store-contracts para alterar a API compartilhada sem criar divergências."

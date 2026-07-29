@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Next.js RaizStore"
+  short_description: "Frontend Next.js limpo, acessível e tipado"
+  default_prompt: "Use $typescript-nextjs-store para implementar uma funcionalidade no frontend do RaizStore."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend NestJS RaizStore"
+  short_description: "Backend NestJS com DDD, CQRS e SOLID"
+  default_prompt: "Use $typescript-nestjs-cqrs para implementar uma funcionalidade no backend do RaizStore."
