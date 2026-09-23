@@ -147,6 +147,20 @@ npm run test
 npm run build
 ```
 
+## Análise de qualidade com SonarQube Cloud
+
+O projeto é analisado automaticamente pelo GitHub Actions em cada `push`, pull request ou execução manual do workflow **SonarQube Cloud**. A análise reúne problemas, vulnerabilidades, duplicação, cobertura de testes e o *Quality Gate* em um único painel.
+
+Para concluir a primeira configuração:
+
+1. Acesse [SonarQube Cloud](https://sonarcloud.io) com a conta do GitHub que tem acesso a `raulgdias/raiz-store` e importe o repositório.
+2. Confirme que a organização é `raulgdias` e que a chave do projeto é `raulgdias_raiz-store` (os mesmos valores de `sonar-project.properties`).
+3. Crie um token de análise no SonarQube Cloud.
+4. No GitHub, abra **Settings → Secrets and variables → Actions → New repository secret**, crie o segredo `SONAR_TOKEN` e cole o token.
+5. Abra a aba **Actions** do repositório e execute o workflow **SonarQube Cloud**. Ao terminar, o link do relatório estará no log da etapa de análise.
+
+O token é um segredo: não o adicione a `.env`, `sonar-project.properties` ou ao código. A configuração analisa `apps/api`, `apps/web` e `packages/contracts`; a cobertura do Jest da API é enviada no mesmo workflow.
+
 ---
 
 <div align="center">
